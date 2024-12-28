@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <p>This is another paragraph.</p>  
+  <div id="myDiv"></div>
+  <script>
+    // Incorrect way to get element by ID
+    var element = document.getElementById('myDiv');
+    element.innerHTML = "<p>This is added via JavaScript.</p>";
+    // The error occurs if the element does not exists in the HTML code.
+    document.getElementByid("nonExistingElement").innerHTML = "This will cause an error.";  
+  </script>
+</body>
+</html>
