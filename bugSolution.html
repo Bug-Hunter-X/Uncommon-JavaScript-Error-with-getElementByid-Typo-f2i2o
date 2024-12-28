@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Corrected HTML</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <p>This is another paragraph.</p>
+  <div id="myDiv"></div>
+  <div id="nonExistingElement"></div>
+  <script>
+    // Correct way to get element by ID. Check if the element exists first.
+    var element = document.getElementById('myDiv');
+    if (element) {
+        element.innerHTML = "<p>This is added via JavaScript.</p>";
+    }
+    var nonExisting = document.getElementById('nonExistingElement');
+    if(nonExisting){
+        nonExisting.innerHTML = "This element exists";
+    } else {
+        console.log("Element does not exist");
+    }
+  </script>
+</body>
+</html>
